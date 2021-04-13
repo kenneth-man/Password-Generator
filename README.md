@@ -1,6 +1,6 @@
 # Password Generator
 
-A simple project to generate random passwords based on setting the user chooses. 
+A simple project to generate random passwords based on settings the user chooses. 
 
 Practicing array manipulation using .join(), .find(), .push() and nodelists with forEach(); also copying to clipboard functionality.
 
