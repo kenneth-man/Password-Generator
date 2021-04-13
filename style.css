@@ -1,0 +1,195 @@
+/*boiler plate project set-up*/
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+/***************/
+
+.container {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.video-cont {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+    filter: brightness(40%);
+}
+
+.video-cont video{
+    /*makes fill container regardless of resolutions*/
+   min-height: 100%;
+   min-width: 100%;
+}
+
+.content {
+    height: 70%;
+    width: 30%;
+    justify-content: space-evenly;
+    background-color: rgb(2, 29, 6);
+    box-shadow: 0px 0px 50px rgba(255,255,255,0.4);
+    border: 1px solid #fff;
+    padding: 0px 30px;
+}
+
+.content__header {
+    height: max-content;
+    width: 75%;
+    justify-content: space-between;
+}
+
+.content__main,
+.content__settings {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.content__main {
+    height: 12%;
+    padding: 0px 30px;
+    background-color: rgb(15, 109, 2);
+    border: 1px dashed #fff;
+}
+
+.content__settings {
+    height: 35%;
+    justify-content: space-evenly;
+}
+
+.setting {
+    height: max-content;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.icon {
+    fill: #fff;
+}
+
+.icon-large {
+    height: 40px;
+    width: 40px;
+}
+
+.icon-small {
+    height: 30px;
+    width: 30px;
+}
+
+.btn {
+    height: max-content;
+    width: max-content;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-small {
+    padding: 7.5px;
+    background-color: #000;
+}
+
+.btn-small:hover {
+    background-color: #fff;
+}
+
+.btn-small:hover svg {
+    fill:  #000;
+}
+
+.btn-large {
+    padding: 10px 20px;
+    font-size: 20px;
+    color: #000 !important;
+    background-color: #fff;
+}   
+
+.btn-large:hover {
+    color: #fff !important;
+    background-color: #000;
+}
+
+.input {
+    height: 30px;
+    width: 50px;
+    font-size: 16px;
+    padding-left: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.checkbox {
+    height: 20px;
+    width: 20px;
+}
+
+.btn,
+.h1,
+.txtarea,
+.h3 {
+    font-family: 'Heebo';
+    color: #fff;
+}
+
+.h1 {
+    font-size: 30px;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+.txtarea {
+    height: max-content;
+    width: 80%;
+    font-size: 25px;
+    background-color: transparent;
+    padding-top: 20px;
+    line-height: 20px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.h3 {
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round-border {
+    border-radius: 3px;
+}
+
+.transition {
+    transition: all 0.25s;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="shortcut icon" type="image/png" href="res/icon.png"> -->
+
+        <title>#21 &mdash; password generator</title>
+    </head>
+
+    <body>
+        <main class="container center">
+            <div class="video-cont">
+                <!--id selector on video element to change src in js-->
+                <video autoplay muted loop id="video">
+                    <source src="./res/background.mp4" type="video/mp4">
+                    Your browser doesn't support this video
+                </video>
+            </div>
+            
+            <section class="content column round-border">
+                <div class="content__header row">
+                    <svg class="icon icon-large">
+                        <use href="./res/symbol-defs.svg#icon-unlock-alt"></use>
+                    </svg>
+
+                    <h1 class="h1">Password Generator</h1>
+                </div>
+
+                <div class="content__main row round-border">
+                    <textarea readonly class="txtarea transition" id="password"></textarea>
+
+                    <button class="btn btn-small center round-border transition" id="btn-copy">
+                        <svg class="icon icon-small">
+                            <use href="./res/symbol-defs.svg#icon-clipboard"></use>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="content__settings column">
+                    <div class="setting row" id="settingLength">
+                        <h3 class="h3">Password length</h3>
+
+                        <input type="number" min="5" max="20" value="20" class="input">
+                    </div>
+
+                    <div class="setting row" id="settingUppercase">
+                        <h3 class="h3">Include uppercase letters</h3>
+
+                        <input type="checkbox" class="checkbox transition">
+                    </div>
+
+                    <div class="setting row" id="settingLowercase">
+                        <h3 class="h3">Include lowercase letters</h3>
+
+                        <input type="checkbox" class="checkbox transition">
+                    </div>
+
+                    <div class="setting row" id="settingNumbers">
+                        <h3 class="h3">Include numbers</h3>
+
+                        <input type="checkbox" class="checkbox transition">
+                    </div>
+
+                    <div class="setting row" id="settingSymbols">
+                        <h3 class="h3">Include symbols</h3>
+
+                        <input type="checkbox" class="checkbox transition">
+                    </div>
+                </div>
+
+                <button class="btn btn-large center round-border transition" id="btn-generate">Generate password</button>
+            </section>
+        </main>
+  
+        <script type="text/javascript" src="./script.js"></script>
+    </body>
+</html>
